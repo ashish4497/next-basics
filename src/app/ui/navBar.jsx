@@ -26,7 +26,7 @@ export default function HeaderNav() {
           <div>
             <Link href='#'>
               <div class='rounded-full h-16 w-16 flex items-center justify-center bg-gray-200'>
-                Ashish
+                User
               </div>
             </Link>
           </div>
