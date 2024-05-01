@@ -1,5 +1,4 @@
 /** @format */
-
 'use client';
 import { createSlice } from '@reduxjs/toolkit';
 import { Counter } from '../../types/counterType';

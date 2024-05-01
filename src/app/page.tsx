@@ -28,7 +28,7 @@ export default function Home() {
   };
 
   return (
-    <div className='md:container md:mx-auto py-12'>
+    <div>
       <HeaderNav/>
       <div className='shadow text-center py-4'>
         <h2 className='text-gray-800 uppercase'>counter</h2>

@@ -1,4 +1,4 @@
 export type Counter = {
-  [x: string]: any
+  [x: string]: any,
   count: number
 }
