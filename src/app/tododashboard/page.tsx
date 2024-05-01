@@ -1,3 +1,9 @@
+import HeaderNav from "../ui/navBar";
+import Todo from "../ui/todo";
+
 export default function todoPage(){
-  return <p>ToDo page</p>
+  return<>
+  <HeaderNav/>
+  <Todo/>
+  </>
 }
