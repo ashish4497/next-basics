@@ -1,6 +1,7 @@
 'use client'
 import { Provider } from "react-redux";
 import "./globals.css";
+import './globalIcons.css'
 import { store } from "./lib/store";
 import { inter } from "./ui/fonts";
 
