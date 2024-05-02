@@ -8,7 +8,7 @@ const initialState: Todos = {
   todos: [],
 };
 
-
+console.log(initialState.todos,"initialState");
 
 export const todoSlice = createSlice({
   name: 'todo',
@@ -20,19 +20,23 @@ export const todoSlice = createSlice({
         text: action.payload,
         isChecked: false,
       };
-      state.todos =[...state.todos, newTodo]
+      state.todos = [...state.todos, newTodo];
     },
+
     deleteTodo: (state, action) => {
-      state.todos = state.todos.filter((todo)=> todo.id !== action.payload )
+      state.todos = state.todos.filter((todo) => todo.id !== action.payload);
+    },
+
+    editTodo: (state, action) => {
+      //Not Clear 
+      state.todos = [...state.todos, action.payload];
     },
   },
 });
 
-export const { addTodo, deleteTodo } = todoSlice.actions;
+export const { addTodo, deleteTodo, editTodo } = todoSlice.actions;
 
-export const todoList = (state: {
-  [x: string]: any; todos: Todos 
-}) => state.todo;
-      console.log(todoList, 'lllll');
+export const todoList = (state: { [x: string]: any; todos: Todos }) =>
+  state.todo;
 
 export default todoSlice.reducer;
