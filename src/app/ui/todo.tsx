@@ -29,7 +29,6 @@ export default function Todo() {
 
   const { todos } = useSelector(todoList);
 
-console.log(todos,"todos");
 
   const handleChange = (e: any) => {
     e.preventDefault();
@@ -50,6 +49,9 @@ console.log(todos,"todos");
     const { id, text } = todo;
     setIsEdit(id);
     setEditText(text);
+    console.log(todo,"sds")
+    console.log(todos,"todos");
+
   };
 
   const handleSubmit = async (e: { preventDefault: () => void }) => {  
@@ -113,9 +115,9 @@ console.log(todos,"todos");
                 className='flex justify-center '>
                 <li>{todo.text}</li>
                 <li
-                  onClick={() => handleRemove(todo.id)}
+                  
                   className='ml-10 cursor-pointer ont-black'>
-                  <span className='material-symbols-outlined'>delete</span>
+                  <span className='material-symbols-outlined' onClick={() => handleRemove(todo.id)}>delete</span>
                   <span
                     className='material-symbols-outlined ml-6'
                     onClick={() => handleEdit(todo)}>

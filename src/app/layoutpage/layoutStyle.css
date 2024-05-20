@@ -1,0 +1,12 @@
+.parent-container {
+  display: flex;
+  /* justify-content: space-between; */
+}
+
+.sec-left {
+  width: 20%;
+}
+
+.sec-right {
+  width: 70%;
+}
