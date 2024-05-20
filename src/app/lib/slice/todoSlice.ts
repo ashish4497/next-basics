@@ -8,8 +8,6 @@ const initialState: Todos = {
   todos: [],
 };
 
-console.log(initialState.todos,"initialState");
-
 export const todoSlice = createSlice({
   name: 'todo',
   initialState,
@@ -28,8 +26,12 @@ export const todoSlice = createSlice({
     },
 
     editTodo: (state, action) => {
-      //Not Clear 
-      state.todos = [...state.todos, action.payload];
+      const { id, text } = action.payload;
+      const todoToEdit = state.todos.find((todo) => todo.id === id);
+
+      if (todoToEdit) {
+        todoToEdit.text = text;
+      }
     },
   },
 });
